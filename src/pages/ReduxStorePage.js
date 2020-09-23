@@ -18,6 +18,7 @@ export default class ReduxStorePage extends Component {
     store.dispatch({ type: 'others' })
   }
   render() {
+    console.log('render', store.getState())
     return (
       <div>
         <h1>ReduxPage</h1>
