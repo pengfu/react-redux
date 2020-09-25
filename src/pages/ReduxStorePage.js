@@ -17,6 +17,13 @@ export default class ReduxStorePage extends Component {
   stayStatic = () => {
     store.dispatch({ type: 'others' })
   }
+  asyncAdd = () => {
+    store.dispatch((dispatch) => {
+      setTimeout(() => {
+        dispatch({ type: 'add' })
+      }, 1000)
+    })
+  }
   render() {
     console.log('render', store.getState())
     return (
@@ -26,6 +33,7 @@ export default class ReduxStorePage extends Component {
         <button onClick={this.add}>add</button>
         <button onClick={this.minus}>minus</button>
         <button onClick={this.stayStatic}>static</button>
+        <button onClick={this.asyncAdd}>asyncAdd</button>
       </div>
     )
   }
