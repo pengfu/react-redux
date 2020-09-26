@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactReduxStoreInnerPage from './ReactReduxStoreInnerPage'
-import { Provider } from 'react-redux'
+// import { Provider } from 'react-redux' // 框架的
+import { Provider } from '../../myReactRedux'
 import store from '../../store/ReactReduxStore'
 
 export default class App extends Component {
